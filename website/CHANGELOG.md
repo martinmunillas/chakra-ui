@@ -1,5 +1,24 @@
 # Change Log
 
+## 2.0.0
+
+### Major Changes
+
+- [`2418de87b`](https://github.com/chakra-ui/chakra-ui/commit/2418de87ba12cfffda24ebbf32476fb09d3d82bd)
+  Thanks [@MasterGordon](https://github.com/MasterGordon)! - Removed blog The
+  blog has removed been because nobody has written any articles.
+
+### Patch Changes
+
+- [`ed0ce623f`](https://github.com/chakra-ui/chakra-ui/commit/ed0ce623ffe2a0f9b88480bdea97468896b3a802)
+  [#4568](https://github.com/chakra-ui/chakra-ui/pull/4568) Thanks
+  [@lazarnikolov94](https://github.com/lazarnikolov94)! - Fixed the sidebar
+  links' active state
+
+- Updated dependencies []:
+  - @chakra-ui/react@1.6.7
+  - @chakra-ui/props-docs@1.0.32
+
 ## 1.3.2
 
 ### Patch Changes
