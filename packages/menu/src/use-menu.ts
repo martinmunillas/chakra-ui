@@ -111,6 +111,14 @@ export interface UseMenuProps extends UsePopperProps, UseDisclosureProps {
    * as it might affect scrolling performance.
    */
   computePositionOnMount?: boolean
+
+  /**
+   * If `true`, the focus will be restored when the menu is closed.
+   *
+   * Note 🚨: We don't recommend using this as it would make it less
+   * accessible unless you are willing to handle this behavior yourself.
+   */
+  shouldFocusOnClose?: boolean
 }
 
 /**
@@ -133,6 +141,7 @@ export function useMenu(props: UseMenuProps = {}) {
     placement = "bottom-start",
     lazyBehavior = "unmount",
     computePositionOnMount,
+    shouldFocusOnClose = true,
     ...popperProps
   } = props
 
@@ -187,7 +196,7 @@ export function useMenu(props: UseMenuProps = {}) {
   useFocusOnHide(menuRef, {
     focusRef: buttonRef,
     visible: isOpen,
-    shouldFocus: true,
+    shouldFocus: shouldFocusOnClose,
   })
 
   /**
